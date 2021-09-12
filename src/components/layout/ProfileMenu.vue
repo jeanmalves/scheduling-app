@@ -1,6 +1,6 @@
 <template>
   <!-- Profile dropdown -->
-  <div id="profile" class="ml-3 relative">
+  <div class="ml-3 relative">
     <div @click="toggle()">
       <button
         type="button"
@@ -106,9 +106,20 @@ export default {
   data: () => ({
     isOpen: false,
   }),
+  mounted() {
+    document.addEventListener('click', this.clickOutListener);
+  },
   methods: {
     toggle() {
       this.isOpen = !this.isOpen;
+    },
+    close() {
+      this.isOpen = false;
+    },
+    clickOutListener(event) {
+      if (!this.$el.contains(event.target)) {
+        this.close();
+      }
     },
   },
 };
