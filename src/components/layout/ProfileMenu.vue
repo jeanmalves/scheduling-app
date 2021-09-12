@@ -101,3 +101,15 @@
     </transition>
   </div>
 </template>
+<script>
+export default {
+  data: () => ({
+    isOpen: false,
+  }),
+  methods: {
+    toggle() {
+      this.isOpen = !this.isOpen;
+    },
+  },
+};
+</script>
