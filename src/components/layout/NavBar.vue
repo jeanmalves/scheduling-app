@@ -51,7 +51,7 @@
         </div>
       </div>
     </div>
-    <MobileMenuItems />
+    <MobileMenuItems v-show="this.isOpen" />
   </nav>
 </template>
 <script>
@@ -67,5 +67,9 @@ export default {
     MobileMenuButton,
     MobileMenuItems,
   },
+  data: () => ({
+    isOpen: false,
+  }),
+  methods: {},
 };
 </script>
