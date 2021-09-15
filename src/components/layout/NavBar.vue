@@ -47,11 +47,14 @@
           </div>
         </div>
         <div class="-mr-2 flex md:hidden">
-          <MobileMenuButton :isOpen="false" />
+          <MobileMenuButton
+            :isOpen="mobileMenuIsOpen"
+            @toggle="toggleMobileMenu"
+          />
         </div>
       </div>
     </div>
-    <MobileMenuItems v-show="this.isOpen" />
+    <MobileMenuItems v-show="mobileMenuIsOpen" />
   </nav>
 </template>
 <script>
@@ -68,8 +71,12 @@ export default {
     MobileMenuItems,
   },
   data: () => ({
-    isOpen: false,
+    mobileMenuIsOpen: false,
   }),
-  methods: {},
+  methods: {
+    toggleMobileMenu() {
+      this.mobileMenuIsOpen = !this.mobileMenuIsOpen;
+    },
+  },
 };
 </script>

@@ -30,7 +30,7 @@
               Menu open: "hidden", Menu closed: "block"
             -->
       <svg
-        :class="[this.isOpen ? 'hidden' : 'block', 'h-6 w-6']"
+        :class="[isOpen ? 'hidden' : 'block', 'h-6 w-6']"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -50,7 +50,7 @@
               Menu open: "block", Menu closed: "hidden"
             -->
       <svg
-        :class="[this.isOpen ? 'block' : 'hidden', 'h-6 w-6']"
+        :class="[isOpen ? 'block' : 'hidden', 'h-6 w-6']"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -77,7 +77,7 @@ export default {
   },
   methods: {
     toggle() {
-      this.isOpen = !this.isOpen;
+      this.$emit('toggle');
     },
   },
 };
