@@ -17,7 +17,7 @@
           xl:gap-x-8
         "
       >
-        <Services
+        <Service
           v-for="service in services"
           :image="service.cover"
           :serviceName="service.title"
@@ -31,11 +31,11 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
-import Services from '@/components/Services.vue';
+import Service from '@/components/Service.vue';
 
 export default {
   name: 'Home',
-  components: { Services },
+  components: { Service },
 
   created() {
     this.fetchServices().then();
