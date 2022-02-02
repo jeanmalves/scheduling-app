@@ -21,7 +21,7 @@ export default {
 
   buyServices(services, cb, errorCb) {
     setTimeout(() => {
-      // simulate random checkout failure.
+      // simulate random failure.
       // eslint-disable-next-line no-unused-expressions
       (Math.random() > 0.5 || navigator.webdriver)
         ? cb()
