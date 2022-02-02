@@ -17,129 +17,36 @@
           xl:gap-x-8
         "
       >
-        <div class="group relative">
-          <div
-            class="
-              w-full
-              min-h-80
-              bg-gray-200
-              aspect-w-1 aspect-h-1
-              rounded-md
-              overflow-hidden
-              group-hover:opacity-75
-              lg:h-80
-              lg:aspect-none
-            "
-          >
-            <img
-              src="../assets/images/shave.jpg"
-              alt="Front of men&#039;s Basic Tee in black."
-              class="
-                w-full
-                h-full
-                object-center object-cover
-                lg:w-full
-                lg:h-full
-              "
-            />
-          </div>
-          <div class="mt-4 flex justify-between">
-            <div>
-              <h3 class="text-sm text-gray-700">
-                <a href="#">
-                  <span aria-hidden="true" class="absolute inset-0"></span>
-                  Barba
-                </a>
-              </h3>
-            </div>
-            <p class="text-sm font-medium text-gray-900">$35</p>
-          </div>
-        </div>
-        <div class="group relative">
-          <div
-            class="
-              w-full
-              min-h-80
-              bg-gray-200
-              aspect-w-1 aspect-h-1
-              rounded-md
-              overflow-hidden
-              group-hover:opacity-75
-              lg:h-80
-              lg:aspect-none
-            "
-          >
-            <img
-              src="../assets/images/hair-cut.jpg"
-              alt="Front of men&#039;s Basic Tee in black."
-              class="
-                w-full
-                h-full
-                object-center object-cover
-                lg:w-full
-                lg:h-full
-              "
-            />
-          </div>
-          <div class="mt-4 flex justify-between">
-            <div>
-              <h3 class="text-sm text-gray-700">
-                <a href="#">
-                  <span aria-hidden="true" class="absolute inset-0"></span>
-                  Corte de cabelo
-                </a>
-              </h3>
-            </div>
-            <p class="text-sm font-medium text-gray-900">$40</p>
-          </div>
-        </div>
-        <div class="group relative">
-          <div
-            class="
-              w-full
-              min-h-80
-              bg-gray-200
-              aspect-w-1 aspect-h-1
-              rounded-md
-              overflow-hidden
-              group-hover:opacity-75
-              lg:h-80
-              lg:aspect-none
-            "
-          >
-            <img
-              src="../assets/images/therapy-shave.jpg"
-              alt="Front of men&#039;s Basic Tee in black."
-              class="
-                w-full
-                h-full
-                object-center object-cover
-                lg:w-full
-                lg:h-full
-              "
-            />
-          </div>
-          <div class="mt-4 flex justify-between">
-            <div>
-              <h3 class="text-sm text-gray-700">
-                <a href="#">
-                  <span aria-hidden="true" class="absolute inset-0"></span>
-                  Barboterapia
-                </a>
-              </h3>
-            </div>
-            <p class="text-sm font-medium text-gray-900">$80</p>
-          </div>
-        </div>
+        <Services
+          image="shave.jpg"
+          alt="Front of men&#039;s Basic Tee in black."
+          serviceName="Barba"
+          :price="35"
+        />
+        <Services
+          image="hair-cut.jpg"
+          alt="Front of men&#039;s Basic Tee in black."
+          serviceName="Corte de cabelo"
+          :price="40"
+        />
+        <Services
+          image="therapy-shave.jpg"
+          alt="Front of men&#039;s Basic Tee in black."
+          serviceName="Barboterapia"
+          :price="80"
+        />
 
-        <!-- More products... -->
+        <!-- More... -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Services from '@/components/Services.vue';
+
 export default {
   name: 'Home',
+  components: { Services },
 };
 </script>
