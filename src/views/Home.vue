@@ -38,7 +38,7 @@ export default {
   components: { Service },
 
   created() {
-    this.fetchServices().then();
+    this.fetchServices();
   },
 
   computed: {
