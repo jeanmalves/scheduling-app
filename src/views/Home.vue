@@ -18,35 +18,35 @@
         "
       >
         <Services
-          image="shave.jpg"
-          alt="Front of men&#039;s Basic Tee in black."
-          serviceName="Barba"
-          :price="35"
+          v-for="service in services"
+          :image="service.cover"
+          :serviceName="service.title"
+          :price="service.price"
+          :key="service.id"
         />
-        <Services
-          image="hair-cut.jpg"
-          alt="Front of men&#039;s Basic Tee in black."
-          serviceName="Corte de cabelo"
-          :price="40"
-        />
-        <Services
-          image="therapy-shave.jpg"
-          alt="Front of men&#039;s Basic Tee in black."
-          serviceName="Barboterapia"
-          :price="80"
-        />
-
-        <!-- More... -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex';
 import Services from '@/components/Services.vue';
 
 export default {
   name: 'Home',
   components: { Services },
+
+  created() {
+    this.fetchServices().then();
+  },
+
+  computed: {
+    ...mapState({ services: (state) => state.services.items }),
+  },
+
+  methods: {
+    ...mapActions({ fetchServices: 'services/fetchServices' }),
+  },
 };
 </script>
