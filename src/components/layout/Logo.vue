@@ -5,6 +5,8 @@
       src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
       alt="Workflow"
     />
-    <div class="hidden md:block text-2xl text-gray-50">Workflow</div>
+    <div class="hidden md:block font-semibold text-2xl text-gray-50">
+      The Barber Shop
+    </div>
   </div>
 </template>
