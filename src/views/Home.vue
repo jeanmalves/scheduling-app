@@ -22,6 +22,7 @@
           :image="service.cover"
           :serviceName="service.title"
           :price="service.price"
+          :id="service.id"
           :key="service.id"
         />
       </div>
